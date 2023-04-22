@@ -12,10 +12,10 @@
 ********************************************************************************/ 
 
 var HTTP_PORT = process.env.PORT || 8080;
-const express = require("express");
+var express = require("express");
 const exphbs = require("express-handlebars");
-const app = express();
-const cd = require('./modules/collegedata.js');
+var app = express();
+var cd = require('./modules/collegedata.js');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.set('views', './views');
