@@ -7,11 +7,11 @@
 *  Name:Sercan Yildiz Student ID: 131043226 Date: 04/22/2023
 *
 *
-*  Online (Cycliic) Link: https://dull-pink-katydid-gear.cyclic.app
+*  Online (Cycliic) Link: https://wild-pear-angler-hose.cyclic.app/
 *
 ********************************************************************************/ 
 
-
+var HTTP_PORT = process.env.PORT || 8080;
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
