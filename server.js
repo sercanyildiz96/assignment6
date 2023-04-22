@@ -109,17 +109,16 @@ cd.getCourses()
 
 app.get("/student/:studentNum", async (req, res) => {
   try {
-    const viewData = {}; // initialize an empty object to store the values
+    const viewData = {}; 
 
-    const student = await cd.getStudentByNum(req.params.studentNum); // get student by number
-
+    const student = await cd.getStudentByNum(req.params.studentNum);
     if (student) {
-      viewData.student = student; // store student data in the "viewData" object as "student"
+      viewData.student = student; 
     } else {
-      viewData.student = null; // set student to null if none were returned
+      viewData.student = null;
     }
 
-    const courses = await cd.getCOurses(); // get all courses
+    const courses = await cd.getCOurses(); 
 
     if (courses) {
       viewData.courses = courses;
@@ -127,7 +126,6 @@ app.get("/student/:studentNum", async (req, res) => {
       viewData.courses = null;
     }
 
-    // loop through viewData.courses and add a "selected" property to the matching course object
     const matchingCourse = viewData.courses.find(
       (course) => course.courseId === viewData.student.courseId
     );
@@ -135,10 +133,10 @@ app.get("/student/:studentNum", async (req, res) => {
       matchingCourse.selected = true;
     }
 
-    if (viewData.student == null) { // if no student - return an error
+    if (viewData.student == null) {
       res.status(404).send("Student Not Found");
     } else {
-      res.render("student", { viewData }); // render the "student" view
+      res.render("student", { viewData });
     }
   } catch (error) {
     console.log(error);
