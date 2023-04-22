@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Satisfy&display=swap');
+
+body {
+  margin: 0;
+  background: -webkit-linear-gradient(45deg, #2c3e50, #bdc3c7);
+  background: linear-gradient(45deg, #2c3e50, #bdc3c7);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  background-attachment: fixed;
+}
+
+/* Background color */
+.bg-light {
+  font-family: 'Satisfy', cursive;
+  background-color: #f1c40f !important;
+  box-shadow: 0 10px 10px -4px rgba(240, 240, 240, 0.7);
+}
+
+/* Navigation bar component */
+.navbar-light .navbar-brand {
+  color: #34495e;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #34495e;
+  font-size: 25px;
+}
+
+/* Container component */
+.container .row h1 {
+  font-family: 'Satisfy', cursive;
+  font-weight: normal;
+  font-size: 60px;
+}
+
+/* Margin/alignment */
+p {
+  margin-bottom: 2rem;
+  text-align: justify;
+  font-size: 20px;
+}
+
+/* Table component */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.table caption {
+  color: #2c3e50;
+}
+
+.table th,
+.table td {
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #34495e;
+}
+
+.table th {
+  text-align: center;
+}
+
+.table thead th {
+  background-color: #f1c40f;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.table tbody td {
+  position: relative;
+}
+
+.table tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
